@@ -1,6 +1,7 @@
 ---
+
 - name: import common file
-  import_playbooks: ../Static-assignments/common.yml
+  import_playbook: ../Static-assignments/common.yml
   tags:
     - always
 
@@ -17,5 +18,5 @@
 
 - name: import loadbalancers assignment
   import_playbook: ../Static-assignment/loadbalancers.yml
-  when:load_balancer_is_reguired  
+  when: load_balancer_is_reguired  
 
