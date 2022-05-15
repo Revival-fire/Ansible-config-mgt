@@ -11,12 +11,12 @@
     - always
 
 - name: import database file
-  import_playbook: ../Static-assignmet/db.yml
+  import_playbook: ../Static-assignments/db.yml
 
 - name: import uat-webserver file
-  import_playbook: ../Static-assignment/uat-webservers.yml
+  import_playbook: ../Static-assignments/uat-webservers.yml
 
 - name: import loadbalancers assignment
-  import_playbook: ../Static-assignment/loadbalancers.yml
+  import_playbook: ../Static-assignments/loadbalancers.yml
   when: load_balancer_is_reguired  
 
