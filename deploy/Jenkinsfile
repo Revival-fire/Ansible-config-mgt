@@ -2,10 +2,10 @@
     agent any
 
   stages {
-    stage("initial cleanup") {
+   stage("Initial cleanup") {
       steps{
         dir("${WORKSPACE}") {
-          deletedir()
+          deleteDir()
         }
       }
     }
@@ -33,7 +33,7 @@
       }
     }
 
-    stage('deploy') {
+    stage('D eploy') {
       steps {
         script {
           sh 'echo "Deploying to Dev" '
@@ -43,7 +43,7 @@
 
     stage ("clean up") {
       steps{
-        cleanws()
+        cleanWs()
       }
     }
   }
